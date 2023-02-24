@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+body {
+  background-color: #fef9f3;
+}
+body #Wrap {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  background-color: #fef9f3;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+.nav .navBox {
+  display: flex;
+  justify-content: space-between;
+}
+.nav .navBox .navLeft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
+  margin-left: 20px;
+}
+.nav .navBox .navRight {
+  display: flex;
+  text-align: center;
+}
+.nav .navBox .navRight div {
+  border-left: 1px solid #000;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
+}
+.nav .navBox .navRight > div:nth-child(1) {
+  background-color: transparent;
+}
+.nav .navBox .navRight > div:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  margin-top: 64px;
+}
+.content section:nth-child(1) {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  border-bottom: 1px solid #000;
+}
+.content section:nth-child(1) > div:nth-child(1) {
+  width: 50%;
+  border-right: 1px solid #000;
+  background-color: #3b5998;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+}
+.content section:nth-child(1) > div:nth-child(1) > div > span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
+}
+.content section:nth-child(1) > div:nth-child(1) > div > p {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
+  padding-bottom: 20px;
+}
+.content section:nth-child(1) > div:nth-child(2) {
+  width: 50%;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content section:nth-child(1) > div:nth-child(2) > div {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #000;
+  background-color: #fec71f;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+.content section:nth-child(1) > div:nth-child(2) > div > img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -9px;
+}
+.content section.partTwo {
+  border-bottom: 1px solid #000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content section.partTwo > p:nth-child(1) {
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
+}
+.content section.partTwo > p:nth-child(2) {
+  width: 50%;
+  line-height: 1.3em;
+}
+.content section.partThree {
+  border-bottom: 1px solid #000;
+}
+
+/*# sourceMappingURL=style.css.map */
