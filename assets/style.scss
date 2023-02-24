@@ -134,65 +134,140 @@ body {
       font-family: 'Tilt Warp', cursive;
     }
     > p:nth-child(2) {
+      font-weight: 700;
       width: 50%;
-      line-height: 1.3em;
+      line-height: 1.4em;
     }
   }
 
   //section3
   section.partThree {
+    position: relative;
     border-bottom: 1px solid #000;
-
+    display: flex;
     > div.swiperWrap {
       overflow: hidden;
       display: flex;
-        align-items: stretch;
-        height: auto;
-        justify-content: flex-start;
+      align-items: stretch;
+      height: auto;
+      justify-content: flex-start;
+      width: 44rem;
+      border-right:1px solid #000;
 
       > a.pod{
-        width: 44rem;     
-        border-right: 1px solid #000;
-        
-        //hover
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        //   //hover
         &:hover div.pod_image div.pod_image_hold {
           clip-path: ellipse(100% 100% at 50% 50%);
           transition: clip-path .6s cubic-bezier(.55,0,.1,1);
         }
-
-        > div.pod_image {
+        &:hover div.pod_image svg {
+          opacity: 0;
+          transition: opacity 1ms cubic-bezier(.55,0,.1,1);
+        }
+        .pod_image{
           width: 100%;
           overflow: hidden;
-          position: relative;
-
-          div.pod_image_hold {
+          position:relative;
+          > svg {
+            display: flex;
+            position: absolute;
             backface-visibility: hidden;
-            background-color:#fef9f3;
-            clip-path: ellipse(30% 55% at 50% 50%);
+            left: 50%;
+            top:50%;
+            transform: translate3d(-50%, -50%, 0);
+            transition: opacity .01s cubic-bezier(.55, 0, .1, 1) .4s;
+            width: 128%;
+            z-index: 3;
+          }
+          .pod_image_hold {
+            backface-visibility: hidden;
+            background-color: #fef9f3;
+            clip-path: ellipse(35% 55% at 50% 50%);
             height: 100%;
             width: 100%;
-            transform: rotate(45deg);
-            transition: clip-path .4s cubic-bezier(.55, 0, .1, 1);
-
-            > img {
-              width: 100%;
-              transform: rotate(-45deg);
+            // position: absolute;
+            // left:50%;
+            // top:50%;
+            transform: translate3d(0%, 0%, 0) rotate(45deg);
+            transition: clip-path .4s cubic-bezier(.55,0,.1,1);
+            
+           > img {
+              backface-visibility: hidden;
+              position: absolute;
+              height: 110%;
+              left: 0;
+              object-fit: cover;
+              top: 0;
+              transform: translateZ(0) rotate(-45deg);
+              width: 110%;
             }
           }
+          .pod_image_hold::after {
+              content: "";
+              display: block;
+              padding-bottom: 100%;
+              width: 100%;
+          }
         }
-        > div.pod_image:after {
-          content: "";
-          display: block;
-          width: 100%;
-        }
-        > div.pod_info {
-          border-top:1px solid #000;
-          padding: 10px 0 10px 20px;
-          box-sizing: border-box;
-          font-family: 'Tilt Warp', cursive;
-          font-size: 1.5rem;
+
+        .pod_info {
+           width: 100%;
+           border-top:1px solid #000;
+           padding: 10px 0 10px 20px;
+           box-sizing: border-box;
+           font-family: 'Tilt Warp', cursive;
+           font-size: 1.5rem;
         }
       }
+      // > a.pod{
+      //   width: 44rem;     
+      //   border-right: 1px solid #000;
+        
+      //   //hover
+      //   &:hover div.pod_image div.pod_image_hold {
+      //     clip-path: ellipse(100% 100% at 50% 50%);
+      //     transition: clip-path .6s cubic-bezier(.55,0,.1,1);
+      //   }
+
+      //   > div.pod_image {
+      //     width: 100%;
+      //     overflow: hidden;
+      //     position: relative;
+
+      //     div.pod_image_hold {
+      //       backface-visibility: hidden;
+      //       background-color:#fef9f3;
+      //       clip-path: ellipse(30% 55% at 50% 50%);
+      //       height: 100%;
+      //       width: 100%;
+      //       transform: rotate(45deg);
+      //       transition: clip-path .4s cubic-bezier(.55, 0, .1, 1);
+
+      //       > img {
+      //         width: 100%;
+      //         transform: rotate(-45deg);
+      //       }
+      //     }
+      //   }
+      //   > div.pod_image:after {
+      //     content: "";
+      //     display: block;
+      //     width: 100%;
+      //   }
+      //   > div.pod_info {
+      //     border-top:1px solid #000;
+      //     padding: 10px 0 10px 20px;
+      //     box-sizing: border-box;
+      //     font-family: 'Tilt Warp', cursive;
+      //     font-size: 1.5rem;
+      //   }
+      // }
     }
   }
 

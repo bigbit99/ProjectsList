@@ -123,11 +123,14 @@ body #Wrap {
   font-family: "Tilt Warp", cursive;
 }
 .content section.partTwo > p:nth-child(2) {
+  font-weight: 700;
   width: 50%;
-  line-height: 1.3em;
+  line-height: 1.4em;
 }
 .content section.partThree {
+  position: relative;
   border-bottom: 1px solid #000;
+  display: flex;
 }
 .content section.partThree > div.swiperWrap {
   overflow: hidden;
@@ -135,39 +138,67 @@ body #Wrap {
   align-items: stretch;
   height: auto;
   justify-content: flex-start;
-}
-.content section.partThree > div.swiperWrap > a.pod {
   width: 44rem;
   border-right: 1px solid #000;
+}
+.content section.partThree > div.swiperWrap > a.pod {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .content section.partThree > div.swiperWrap > a.pod:hover div.pod_image div.pod_image_hold {
   clip-path: ellipse(100% 100% at 50% 50%);
   transition: clip-path 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
-.content section.partThree > div.swiperWrap > a.pod > div.pod_image {
+.content section.partThree > div.swiperWrap > a.pod:hover div.pod_image svg {
+  opacity: 0;
+  transition: opacity 1ms cubic-bezier(0.55, 0, 0.1, 1);
+}
+.content section.partThree > div.swiperWrap > a.pod .pod_image {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-.content section.partThree > div.swiperWrap > a.pod > div.pod_image div.pod_image_hold {
+.content section.partThree > div.swiperWrap > a.pod .pod_image > svg {
+  display: flex;
+  position: absolute;
+  backface-visibility: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 0.01s cubic-bezier(0.55, 0, 0.1, 1) 0.4s;
+  width: 128%;
+  z-index: 3;
+}
+.content section.partThree > div.swiperWrap > a.pod .pod_image .pod_image_hold {
   backface-visibility: hidden;
   background-color: #fef9f3;
-  clip-path: ellipse(30% 55% at 50% 50%);
+  clip-path: ellipse(35% 55% at 50% 50%);
   height: 100%;
   width: 100%;
-  transform: rotate(45deg);
+  transform: translate3d(0%, 0%, 0) rotate(45deg);
   transition: clip-path 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
-.content section.partThree > div.swiperWrap > a.pod > div.pod_image div.pod_image_hold > img {
-  width: 100%;
-  transform: rotate(-45deg);
+.content section.partThree > div.swiperWrap > a.pod .pod_image .pod_image_hold > img {
+  backface-visibility: hidden;
+  position: absolute;
+  height: 110%;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  transform: translateZ(0) rotate(-45deg);
+  width: 110%;
 }
-.content section.partThree > div.swiperWrap > a.pod > div.pod_image:after {
+.content section.partThree > div.swiperWrap > a.pod .pod_image .pod_image_hold::after {
   content: "";
   display: block;
+  padding-bottom: 100%;
   width: 100%;
 }
-.content section.partThree > div.swiperWrap > a.pod > div.pod_info {
+.content section.partThree > div.swiperWrap > a.pod .pod_info {
+  width: 100%;
   border-top: 1px solid #000;
   padding: 10px 0 10px 20px;
   box-sizing: border-box;
