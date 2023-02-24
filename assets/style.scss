@@ -7,7 +7,7 @@
 body {
   background-color: #fef9f3;
   #Wrap {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     font-family: 'Nanum Gothic', sans-serif;
   }
@@ -61,7 +61,6 @@ body {
 // 메인
 .content {
   width: 100%;
-  position: relative;
   margin-top: 64px;
 
   //section1
@@ -72,14 +71,15 @@ body {
     justify-content: space-evenly;
     align-items: stretch;
     border-bottom: 1px solid #000;
+   
     > div:nth-child(1) {
       width: 50%;
       border-right: 1px solid #000;
       background-color: #3b5998;
-      padding-left: 20px;
-      box-sizing: border-box;
       display: flex;
       align-items: flex-end;
+      padding-left: 20px;
+      box-sizing: border-box;
       > div {
         > span {
           display: block;
@@ -97,17 +97,17 @@ body {
     }
     > div:nth-child(2) {
       width: 50%;
-      padding: 50px;
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       > div {
         width: 100%;
         max-width: 500px;
         border: 1px solid #000;
         background-color: #fec71f;
-        overflow: hidden;
+        box-sizing: border-box;
         display: flex;
         align-items: stretch;
         > img {
@@ -122,11 +122,11 @@ body {
   //section2
   section.partTwo {
     border-bottom: 1px solid #000;
-    padding: 20px;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
+     padding: 10px 20px;
+     box-sizing: border-box;
     > p:nth-child(1) {
       width: 50%;
       font-size: 2.5rem;
@@ -139,7 +139,74 @@ body {
     }
   }
 
+  //section3
   section.partThree {
     border-bottom: 1px solid #000;
+
+    > div.swiperWrap {
+      overflow: hidden;
+      display: flex;
+        align-items: stretch;
+        height: auto;
+        justify-content: flex-start;
+
+      > a.pod{
+        width: 44rem;     
+        border-right: 1px solid #000;
+        
+        //hover
+        &:hover div.pod_image div.pod_image_hold {
+          clip-path: ellipse(100% 100% at 50% 50%);
+          transition: clip-path .6s cubic-bezier(.55,0,.1,1);
+        }
+
+        > div.pod_image {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+
+          div.pod_image_hold {
+            backface-visibility: hidden;
+            background-color:#fef9f3;
+            clip-path: ellipse(30% 55% at 50% 50%);
+            height: 100%;
+            width: 100%;
+            transform: rotate(45deg);
+            transition: clip-path .4s cubic-bezier(.55, 0, .1, 1);
+
+            > img {
+              width: 100%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        > div.pod_image:after {
+          content: "";
+          display: block;
+          width: 100%;
+        }
+        > div.pod_info {
+          border-top:1px solid #000;
+          padding: 10px 0 10px 20px;
+          box-sizing: border-box;
+          font-family: 'Tilt Warp', cursive;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  //section4 
+  section.partFour {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    background-color: #e5855e;
+    padding: 30px 0;
+    box-sizing: border-box;
+    p {
+      font-size: 4rem;
+      font-weight: bold;
+      font-family: 'Tilt Warp', cursive;
+    }
   }
 }

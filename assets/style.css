@@ -5,7 +5,7 @@ body {
   background-color: #fef9f3;
 }
 body #Wrap {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -55,7 +55,6 @@ body #Wrap {
 
 .content {
   width: 100%;
-  position: relative;
   margin-top: 64px;
 }
 .content section:nth-child(1) {
@@ -70,10 +69,10 @@ body #Wrap {
   width: 50%;
   border-right: 1px solid #000;
   background-color: #3b5998;
-  padding-left: 20px;
-  box-sizing: border-box;
   display: flex;
   align-items: flex-end;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 .content section:nth-child(1) > div:nth-child(1) > div > span {
   display: block;
@@ -89,18 +88,18 @@ body #Wrap {
 }
 .content section:nth-child(1) > div:nth-child(2) {
   width: 50%;
-  padding: 50px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .content section:nth-child(1) > div:nth-child(2) > div {
   width: 100%;
   max-width: 500px;
   border: 1px solid #000;
   background-color: #fec71f;
-  overflow: hidden;
+  box-sizing: border-box;
   display: flex;
   align-items: stretch;
 }
@@ -111,11 +110,11 @@ body #Wrap {
 }
 .content section.partTwo {
   border-bottom: 1px solid #000;
-  padding: 20px;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 .content section.partTwo > p:nth-child(1) {
   width: 50%;
@@ -129,6 +128,63 @@ body #Wrap {
 }
 .content section.partThree {
   border-bottom: 1px solid #000;
+}
+.content section.partThree > div.swiperWrap {
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  height: auto;
+  justify-content: flex-start;
+}
+.content section.partThree > div.swiperWrap > a.pod {
+  width: 44rem;
+  border-right: 1px solid #000;
+}
+.content section.partThree > div.swiperWrap > a.pod:hover div.pod_image div.pod_image_hold {
+  clip-path: ellipse(100% 100% at 50% 50%);
+  transition: clip-path 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.content section.partThree > div.swiperWrap > a.pod > div.pod_image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.content section.partThree > div.swiperWrap > a.pod > div.pod_image div.pod_image_hold {
+  backface-visibility: hidden;
+  background-color: #fef9f3;
+  clip-path: ellipse(30% 55% at 50% 50%);
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+  transition: clip-path 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.content section.partThree > div.swiperWrap > a.pod > div.pod_image div.pod_image_hold > img {
+  width: 100%;
+  transform: rotate(-45deg);
+}
+.content section.partThree > div.swiperWrap > a.pod > div.pod_image:after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+.content section.partThree > div.swiperWrap > a.pod > div.pod_info {
+  border-top: 1px solid #000;
+  padding: 10px 0 10px 20px;
+  box-sizing: border-box;
+  font-family: "Tilt Warp", cursive;
+  font-size: 1.5rem;
+}
+.content section.partFour {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  background-color: #e5855e;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.content section.partFour p {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Tilt Warp", cursive;
 }
 
 /*# sourceMappingURL=style.css.map */
