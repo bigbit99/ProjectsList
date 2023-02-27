@@ -19,14 +19,23 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </head>
+
   <body>
     <div id="Wrap">
       <nav class="nav">
         <div class="navBox">
           <div class="navLeft">Hanbit's Portfolio</div>
           <div class="navRight">
-            <div>Contact Me</div>
+            <div>
+              <a href="">Contact Me</a>
+            </div>
             <div>Go Github</div>
           </div>
         </div>
@@ -41,9 +50,7 @@
           </div>
           <div>
             <div>
-              <img
-                src="./assets/Images/9802DA58-573B-4B29-B520-382475F15A96_1_105_c.jpeg"
-                alt="" />
+              <img src="./assets/Images/hanbit.png" alt="" />
             </div>
           </div>
         </section>
@@ -80,7 +87,9 @@
                         fill="black"></path>
                     </svg>
                     <div class="pod_image_hold">
-                      <img src="./assets/Images/mockup1.png" />
+                      <div class="div_img" style="background-color: #ebcbae">
+                        <img src="./assets/Images/macbook1.png" />
+                      </div>
                     </div>
                   </div>
                   <div class="pod_info">Moobpl</div>
@@ -105,7 +114,9 @@
                         fill="black"></path>
                     </svg>
                     <div class="pod_image_hold">
-                      <img src="./assets/Images/mockup1.png" />
+                      <div class="div_img" style="background-color: #38598b">
+                        <img src="./assets/Images/macbook1.png" />
+                      </div>
                     </div>
                   </div>
                   <div class="pod_info">Booyah!</div>
@@ -130,27 +141,34 @@
                         fill="black"></path>
                     </svg>
                     <div class="pod_image_hold">
-                      <img src="./assets/Images/mockup1.png" />
+                      <div class="div_img" style="background-color: #ebcbae">
+                        <img src="./assets/Images/macbook1.png" />
+                      </div>
                     </div>
                   </div>
-                  <div class="pod_info">Booyah!</div>
+                  <div class="pod_info">Nweeter</div>
                 </a>
               </div>
             </div>
           </div>
         </section>
         <section class="sectionFour">
-          <p>CLICK ME NOW</p>
-          <a>TAP IN</a>
+          <div>
+            <p>CLICK ME NOW</p>
+            <p>
+              If you want to see more projects?<br />
+              so, please press the button
+            </p>
+            <a class="tabIn">
+              <p class="tabText">TAP IN</p>
+            </a>
+          </div>
         </section>
         <section class="sectionFive">
           <p>Works</p>
           <p>
             프론트엔드 개발자가 되기 위해 공부하며 만든 사이드프로젝트입니다.<br />
             특히, 파이어베이스로 서버까지 혼자서 만든 1인 프로젝트 트위터
-            클론코딩이나<br />
-            실제 서버와 통신하는 이사계획 어플까지!<br />
-            저의 다이나믹한 프로젝트들을 한번 보실래요?
           </p>
         </section>
 
@@ -178,53 +196,69 @@
           <div class="works_img">
             <div id="tab1" class="tabCont activeView">
               <h4>
-                <dl>
-                  <dt>한국토지주택공사 웹진</dt>
-                  <dd>with LH</dd>
-                </dl>
+                <div>
+                  <span>한국토지주택공사 웹진</span>
+                </div>
+                <div>
+                  <p>with LH</p>
+                </div>
               </h4>
               <div class="tabImgBox">
                 <a href="">
-                  <img src="./assets/Images/lh_webzine.jpeg" alt="" />
+                  <div>
+                    <img src="./assets/Images/lh_webzine.png" alt="" />
+                  </div>
                 </a>
               </div>
             </div>
             <div id="tab2" class="tabCont">
               <h4>
-                <dl>
-                  <dt>한국문화원연합회 웹진</dt>
-                  <dd>우리문화</dd>
-                </dl>
+                <div>
+                  <span>한국문화원연합회 웹진</span>
+                </div>
+                <div>
+                  <p>우리문화</p>
+                </div>
               </h4>
               <div class="tabImgBox">
                 <a href="">
-                  <img src="./assets/Images/wm_webzine.jpeg" alt="" />
+                  <div>
+                    <img src="./assets/Images/wm_webzine.jpeg" alt="" />
+                  </div>
                 </a>
               </div>
             </div>
             <div id="tab3" class="tabCont">
               <h4>
-                <dl>
-                  <dt>한국국토정보공사 웹진</dt>
-                  <dd>LX 땅과 사람들</dd>
-                </dl>
+                <div>
+                  <span>한국국토정보공사 웹진</span>
+                </div>
+                <div>
+                  <p>LX 땅과 사람들</p>
+                </div>
               </h4>
               <div class="tabImgBox">
                 <a href="">
-                  <img src="./assets/Images/lx_webzine.jpeg" alt="" />
+                  <div>
+                    <img src="./assets/Images/lx_webzine.jpeg" alt="" />
+                  </div>
                 </a>
               </div>
             </div>
             <div id="tab4" class="tabCont">
               <h4>
-                <dl>
-                  <dt>웅진씽크빅 웹진</dt>
-                  <dd>북클럽 ON</dd>
-                </dl>
+                <div>
+                  <span>웅진씽크빅 웹진</span>
+                </div>
+                <div>
+                  <p>북클럽 ON</p>
+                </div>
               </h4>
               <div class="tabImgBox">
                 <a href="">
-                  <img src="./assets/Images/bookclub_webzine.jpeg" alt="" />
+                  <div>
+                    <img src="./assets/Images/bookclub_webzine.jpeg" alt="" />
+                  </div>
                 </a>
               </div>
             </div>
@@ -246,15 +280,105 @@
         <!-- section8 -->
         <section class="sectionEight">
           <ul>
-            <li>Tab Menu</li>
-            <li>Loading Animation</li>
-            <li>Kraken Animation</li>
-            <li>Apple Watch Animation</li>
-            <li>Global Clock</li>
-            <li>Cube Animation</li>
+            <li class="tabmenu">
+              <div id="circleOne" class="circle">
+                <div>
+                  <div class="circle-wrapper">
+                    <div class="circle3"></div>
+                    <div class="circle3"></div>
+                    <div class="circle3"></div>
+                    <div class="circle3"></div>
+                    <div class="circle3"></div>
+                    <div class="circle3"></div>
+                  </div>
+                </div>
+              </div>
+              <a>
+                <p>
+                  <span>Tab Menu</span>
+                </p>
+              </a>
+            </li>
+            <li class="loading">
+              <div id="circleTwo" class="circle"></div>
+              <a>
+                <p>
+                  <span>Loading Animation </span>
+                </p>
+              </a>
+            </li>
+            <li class="kraken">
+              <div id="circleThree" class="circle">
+                <div class="bubble-1"></div>
+                <div class="bubble-2"></div>
+                <div class="bubble-3"></div>
+                <div class="bubble-4"></div>
+                <div class="bubble-5"></div>
+                <div class="bubble-6"></div>
+                <div class="bubble-7"></div>
+                <div class="bubble-8"></div>
+                <div class="bubble-9"></div>
+                <div class="bubble-10"></div>
+
+                <div class="jelly-wrapper">
+                  <div class="jelly-hair"></div>
+                  <div class="jelly-body">
+                    <div class="jelly-inner">
+                      <div class="jelly-eye"></div>
+                      <div class="jelly-mouth"></div>
+                      <div class="jelly-hands"></div>
+                    </div>
+                  </div>
+                  <div class="jelly-tentacle-1"></div>
+
+                  <div class="jelly-tentacle-2"></div>
+
+                  <div class="jelly-tentacle-3"></div>
+
+                  <div class="jelly-tentacle-4"></div>
+
+                  <div class="jelly-tentacle-5"></div>
+                </div>
+                <div class="bubble-11"></div>
+                <div class="bubble-12"></div>
+                <div class="bubble-13"></div>
+                <div class="bubble-14"></div>
+                <div class="bubble-15"></div>
+                <div class="bubble-16"></div>
+                <div class="bubble-17"></div>
+                <div class="bubble-18"></div>
+                <div class="bubble-19"></div>
+                <div class="bubble-20"></div>
+              </div>
+              <a>
+                <p>
+                  <span>Kraken Animation</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <p>
+                  <span>Apple Watch Animation</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <p>
+                  <span>Global Clock</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <p>
+                  <span>Cube Animation</span>
+                </p>
+              </a>
+            </li>
           </ul>
         </section>
-
         <section class="sectionNine"></section>
       </div>
     </div>
