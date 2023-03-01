@@ -71,10 +71,10 @@ for (let j = 0; j < openBtns.length; j++) {
 // });
 
 //🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-//section8 - 마우스오버 이벤트
-const tabmenu = document.querySelector('.sectionEight ul li.tabmenu');
+//section8 - 마우스 무브 이벤트
+const weather = document.querySelector('.sectionEight ul li.weather');
 const cursorOne = document.getElementById('circleOne');
-tabmenu.addEventListener('mousemove', function (e) {
+weather.addEventListener('mousemove', function (e) {
   let x = e.offsetX;
   let y = e.offsetY / 2;
   cursorOne.style.left = x + 'px';
@@ -98,3 +98,83 @@ kraken.addEventListener('mousemove', function (e) {
   cursorThree.style.left = x + 'px';
   cursorThree.style.top = y + 'px';
 });
+
+const apple = document.querySelector('.sectionEight ul li.apple');
+const circleFour = document.getElementById('circleFour');
+apple.addEventListener('mousemove', function (e) {
+  let x = e.offsetX;
+  let y = e.offsetY / 2;
+  circleFour.style.left = x + 'px';
+  circleFour.style.top = y + 'px';
+});
+
+const clock = document.querySelector('.sectionEight ul li.clock');
+const circleFive = document.getElementById('circleFive');
+clock.addEventListener('mousemove', function (e) {
+  let x = e.offsetX;
+  let y = e.offsetY / 2;
+  circleFive.style.left = x + 'px';
+  circleFive.style.top = y + 'px';
+});
+
+const cube = document.querySelector('.sectionEight ul li.cube');
+const circleSix = document.getElementById('circleSix');
+cube.addEventListener('mousemove', function (e) {
+  let x = e.offsetX;
+  let y = e.offsetY / 2;
+  circleSix.style.left = x + 'px';
+  circleSix.style.top = y + 'px';
+});
+
+//section8 - 날씨
+const API_KEY = '09f52fdbc4d95c862e79b3691e828f6b';
+
+function onGeoOk(position) {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const weather = document.querySelector('#weather span:first-child');
+      const city = document.querySelector('#weather span:last-child');
+      city.innerText = data.name;
+      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+    });
+}
+
+function onGeoError() {
+  alert("Can't find you. No weather for you.");
+}
+
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
+// section8 - 로딩바 애니메이션
+function chargeLoading() {
+  let loadBar = document.querySelectorAll('.loadBar');
+
+  for (let i = 0; i < loadBar.length; i++) {
+    setTimeout(function () {
+      loadBar[i].style.display = 'block';
+    }, (i + 1) * 500);
+  }
+  for (let j = 0; j < loadBar.length; j++) {
+    loadBar[j].style.display = 'none';
+  }
+}
+chargeLoading();
+setInterval(chargeLoading, 5000);
+
+//section8 - 시계
+const pointClock = document.querySelector('h2#clock');
+
+function getClock() {
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+  pointClock.innerText = `${hours}:${minutes}:${seconds}`;
+}
+
+getClock();
+setInterval(getClock, 1000);
