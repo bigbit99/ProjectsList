@@ -18,7 +18,57 @@ for (let i = 0; i < tabList.length; i++) {
   });
 }
 
-//section8 - 마우스오버 이미지
+//section6 - 모달
+let body = document.querySelector('body');
+let modals = document.getElementsByClassName('modal');
+let openBtns = document.getElementsByClassName('openBtn');
+let closeBtns = document.getElementsByClassName('closeBtn');
+let funcs = [];
+let index = 1;
+function Modal(num) {
+  return function () {
+    // modals[num].style.display = 'block';
+    // body.classList.add('not_scroll');
+    openBtns[num].onclick = function (e) {
+      e.preventDefault();
+      modals[num].style.display = 'block';
+      modals[num].style.zIndex = '50';
+      body.classList.add('not_scroll');
+      console.log('오픈!');
+      index++;
+    };
+    closeBtns[num].onclick = function (e) {
+      e.preventDefault();
+      modals[num].style.display = 'none';
+      body.classList.remove('not_scroll');
+      console.log('클로즈!');
+    };
+  };
+}
+
+for (let i = 0; i < openBtns.length; i++) {
+  funcs[i] = Modal(i);
+}
+for (let j = 0; j < openBtns.length; j++) {
+  funcs[j]();
+}
+
+//section6 - 마우스오버 이벤트
+// const worksImgArea = document.querySelector(
+//   '.sectionSix .works_img .tabCont .tabImgBox'
+// );
+// const cursorPoint = document.getElementById('cursorPoint');
+
+// worksImgArea.addEventListener('mousemove', function (e) {
+//   let x = e.offsetX;
+//   let y = e.offsetY;
+//   cursorPoint.style.left = x + 'px';
+//   cursorPoint.style.top = y + 'px';
+//   cursorPoint.style.visibility = 'visible';
+// });
+
+//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+//section8 - 마우스오버 이벤트
 const tabmenu = document.querySelector('.sectionEight ul li.tabmenu');
 const cursorOne = document.getElementById('circleOne');
 tabmenu.addEventListener('mousemove', function (e) {

@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 body {
   background-color: #fef9f3;
 }
@@ -9,6 +14,13 @@ body #Wrap {
   width: 100%;
   min-height: 100vh;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .nav {
@@ -123,7 +135,7 @@ body #Wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
 }
 .content .sectionTwo > p:nth-child(1) {
@@ -133,7 +145,7 @@ body #Wrap {
   font-family: "Tilt Warp", cursive;
 }
 .content .sectionTwo > p:nth-child(2) {
-  font-weight: 700;
+  font-weight: 300;
   width: 50%;
   line-height: 1.4em;
 }
@@ -451,17 +463,63 @@ body #Wrap {
 .content .sectionSix > .works_img .tabCont > h4 div:nth-child(2) > p {
   visibility: hidden;
   font-size: 4.5em;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "LINESeedKR-Bd";
   margin-top: 2px;
   display: inline-block;
   transform: translate(0%, 120%);
   transition: all 0.8s;
   overflow: hidden;
 }
+.content .sectionSix > .works_img .tabCont > h4 div:nth-child(3) {
+  overflow: hidden;
+  visibility: hidden;
+}
+.content .sectionSix > .works_img .tabCont > h4 div:nth-child(3) > span {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
 .content .sectionSix > .works_img .tabCont .tabImgBox {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
+}
+.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  transition: ease-in-out 0.3s;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  z-index: 5;
+}
+.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe > a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe > a p {
+  color: #000;
+}
+.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe dl:nth-child(1) {
+  margin-bottom: 15px;
+}
+.content .sectionSix > .works_img .tabCont .tabImgBox:hover .works_subscribe {
+  visibility: visible;
+  opacity: 1;
 }
 .content .sectionSix > .works_img .tabCont .tabImgBox > a {
   display: block;
@@ -502,6 +560,9 @@ body #Wrap {
   visibility: visible;
   transform: translate(0px, 0px);
 }
+.content .sectionSix > .works_img .tabCont.activeView h4 div:nth-child(3) {
+  visibility: visible;
+}
 .content .sectionSix > .works_img .tabCont.activeView .tabImgBox a {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   z-index: 4;
@@ -516,7 +577,7 @@ body #Wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
 }
 .content .sectionSeven > p:nth-child(1) {
@@ -526,7 +587,7 @@ body #Wrap {
   font-family: "Tilt Warp", cursive;
 }
 .content .sectionSeven > p:nth-child(2) {
-  font-weight: 700;
+  font-weight: 300;
   width: 50%;
   line-height: 1.4em;
 }
@@ -1160,6 +1221,47 @@ body #Wrap {
   align-items: center;
   box-sizing: border-box;
   background-color: #000;
+}
+.content .modalWrap {
+  position: relative;
+  width: 100%;
+}
+.content .modalWrap .modal {
+  width: 100%;
+  height: calc(100vh - 64px);
+  margin-top: 65px;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fef9f3;
+  overflow: scroll;
+}
+.content .modalWrap .modal::-webkit-scrollbar {
+  display: none;
+}
+.content .modalWrap .modal .modalBoxOne {
+  width: 100%;
+}
+.content .modalWrap .modal .modalBoxOne .modalTitle {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+}
+.content .modalWrap .modal .modalBoxOne .modalTitle h4 {
+  font-size: 4rem;
+}
+.content .modalWrap .modal .modalBoxOne .modalTitle p {
+  font-size: 0.9rem;
+}
+.content .modalWrap .modal .modalBoxOne .modalImage {
+  padding: 30px;
+  border-bottom: 1px solid #000;
+}
+.content .modalWrap .modal .modalBoxOne .modalImage img {
+  width: 100%;
+  max-width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
