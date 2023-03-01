@@ -27,13 +27,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </head>
 
-  <body>
+  <body id="Body">
     <div id="Wrap">
       <nav class="nav">
         <div class="navBox">
           <div class="navLeft">
             Hanbit's Portfolio
-            <div class="openBtn">Open</div>
+            <!-- <button type="button" class="openBtn">Open</button> -->
+            <!-- <button type="button" class="openBtn">Open</button> -->
           </div>
           <div class="navRight">
             <div>
@@ -204,22 +205,7 @@
                 </div>
               </h4>
               <div class="tabImgBox">
-                <!-- <div id="cursorPoint" class="cursorWatch"></div> -->
-                <!-- <div class="works_subscribe">
-                  <a href="">
-                    <p>Visit Site</p>
-                  </a>
-                  <dl>
-                    <dt>작업기간</dt>
-                    <dd>2021.01 ~ 2022.01</dd>
-                  </dl>
-                  <dl>
-                    <dt>작업내용</dt>
-                    <dd>웹진 유지보수, 어쩌구, 저쩌구</dd>
-                  </dl>
-                </div> -->
-
-                <a href="">
+                <a class="openBtn">
                   <div>
                     <img src="./assets/Images/lh_webzine_box.jpg" alt="" />
                   </div>
@@ -236,17 +222,7 @@
                 </div>
               </h4>
               <div class="tabImgBox">
-                <!-- <div class="works_subscribe">
-                  <dl>
-                    <dt>작업기간</dt>
-                    <dd>2021.01 ~ 2022.01</dd>
-                  </dl>
-                  <dl>
-                    <dt>작업내용</dt>
-                    <dd>웹진 유지보수, 어쩌구, 저쩌구</dd>
-                  </dl>
-                </div> -->
-                <a href="">
+                <a class="openBtn">
                   <div>
                     <img src="./assets/Images/wm_webzine_box.jpg" alt="" />
                   </div>
@@ -261,20 +237,9 @@
                 <div>
                   <p>The-K 매거진</p>
                 </div>
-                <div>
-                  <span></span>
-                  <dl>
-                    <dt>작업기간</dt>
-                    <dd>2021.01 ~ 2022.01</dd>
-                  </dl>
-                  <dl>
-                    <dt>작업내용</dt>
-                    <dd>웹진 유지보수, 어쩌구, 저쩌구</dd>
-                  </dl>
-                </div>
               </h4>
               <div class="tabImgBox">
-                <a href="">
+                <a class="openBtn">
                   <div>
                     <img src="./assets/Images/thek_webzine_box.jpg" alt="" />
                   </div>
@@ -289,20 +254,9 @@
                 <div>
                   <p>북클럽 ON</p>
                 </div>
-                <div>
-                  <span></span>
-                  <dl>
-                    <dt>작업기간</dt>
-                    <dd>2021.01 ~ 2022.01</dd>
-                  </dl>
-                  <dl>
-                    <dt>작업내용</dt>
-                    <dd>웹진 유지보수, 어쩌구, 저쩌구</dd>
-                  </dl>
-                </div>
               </h4>
               <div class="tabImgBox">
-                <a href="">
+                <a class="openBtn">
                   <div>
                     <img src="./assets/Images/bookclub_webzine.jpeg" alt="" />
                   </div>
@@ -431,21 +385,203 @@
         <div class="modalWrap">
           <div class="modal">
             <div class="modalBoxOne">
-              <button class="closeBtn">CLOSE</button>
-              <div class="modalTitle">
+              <div class="topTitle">
                 <h4>width LH</h4>
                 <p>한국토지주택공사 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/lh_webzine.jpeg" alt="" />
+                <img src="assets/Images/lh_webzine_new.jpg" alt="" />
               </div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div class="About">
+                <p>ABOUT THIS</p>
+                <p>
+                  한국 토지주택공사 사보의 웹진 사이트입니다.<br />
+                  풀스크린 라이브러리를 사용해 메인화면에 사진을 배치하여 시원한
+                  느낌을 주었습니다.<br />
+                  사보의 각 목차들이 슬라이드형태로 나올 수 있게 메인에 배치하여
+                  모든 칼럼이 한눈에 보일 수 있도록 배치하였습니다.
+                </p>
+              </div>
+              <!-- <div class="Period">
+                <p>PERIOD</p>
+                <p>2021.01 ~ 2022.01</p>
+              </div>
+              <div class="Contribute">
+                <p>CONTRIBUTE</p>
+                <p>
+                  퍼블리싱, 사이트 구축 100%<br />
+                  유지보수 100%
+                </p>
+              </div> -->
+              <div class="Tech">
+                <div><img src="./assets/Images/lh_webzine.jpg" alt="" /></div>
+                <div>
+                  <p>WORKS</p>
+
+                  <ul>
+                    <li>Google Analytics Report</li>
+                    <li>File Server 관리</li>
+                    <li>콘텐츠, css 유지보수</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="Close">
+                <p></p>
+                <p>
+                  <button class="closeBtn">CLOSE</button>
+                </p>
+              </div>
             </div>
           </div>
           <div class="modal">
-            <button class="closeBtn">CLOSE</button>
+            <div class="modalBoxOne">
+              <div class="topTitle">
+                <h4>우리문화</h4>
+                <p>한국문화원연합회 웹진</p>
+              </div>
+              <div class="modalImage">
+                <img src="assets/Images/wm_webzine_box.jpg" alt="" />
+              </div>
+              <div class="About">
+                <p>ABOUT THIS</p>
+                <p>
+                  한국 토지주택공사 사보의 웹진 사이트입니다.<br />
+                  풀스크린 라이브러리를 사용해 메인화면에 사진을 배치하여 시원한
+                  느낌을 주었습니다.<br />
+                  사보의 각 목차들이 슬라이드형태로 나올 수 있게 메인에 배치하여
+                  모든 칼럼이 한눈에 보일 수 있도록 배치하였습니다.
+                </p>
+              </div>
+              <!-- <div class="Period">
+                <p>PERIOD</p>
+                <p>2021.01 ~ 2022.01</p>
+              </div>
+              <div class="Contribute">
+                <p>CONTRIBUTE</p>
+                <p>
+                  퍼블리싱, 사이트 구축 100%<br />
+                  유지보수 100%
+                </p>
+              </div> -->
+              <div class="Tech">
+                <div><img src="./assets/Images/lh_webzine.jpg" alt="" /></div>
+                <div>
+                  <p>WORKS</p>
+
+                  <ul>
+                    <li>Google Analytics Report</li>
+                    <li>File Server 관리</li>
+                    <li>콘텐츠, css 유지보수</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="Close">
+                <p></p>
+                <p>
+                  <button class="closeBtn">CLOSE</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modalBoxOne">
+              <div class="topTitle">
+                <h4>The-K 매거진</h4>
+                <p>한국교직원공제회</p>
+              </div>
+              <div class="modalImage">
+                <img src="assets/Images/thek_webzine_box.jpg" alt="" />
+              </div>
+              <div class="About">
+                <p>ABOUT THIS</p>
+                <p>
+                  한국 토지주택공사 사보의 웹진 사이트입니다.<br />
+                  풀스크린 라이브러리를 사용해 메인화면에 사진을 배치하여 시원한
+                  느낌을 주었습니다.<br />
+                  사보의 각 목차들이 슬라이드형태로 나올 수 있게 메인에 배치하여
+                  모든 칼럼이 한눈에 보일 수 있도록 배치하였습니다.
+                </p>
+              </div>
+              <!-- <div class="Period">
+                <p>PERIOD</p>
+                <p>2021.01 ~ 2022.01</p>
+              </div>
+              <div class="Contribute">
+                <p>CONTRIBUTE</p>
+                <p>
+                  퍼블리싱, 사이트 구축 100%<br />
+                  유지보수 100%
+                </p>
+              </div> -->
+              <div class="Tech">
+                <div><img src="./assets/Images/lh_webzine.jpg" alt="" /></div>
+                <div>
+                  <p>WORKS</p>
+
+                  <ul>
+                    <li>Google Analytics Report</li>
+                    <li>File Server 관리</li>
+                    <li>콘텐츠, css 유지보수</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="Close">
+                <p></p>
+                <p>
+                  <button class="closeBtn">CLOSE</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modalBoxOne">
+              <div class="topTitle">
+                <h4>북클럽ON</h4>
+                <p>웅진씽크빅</p>
+              </div>
+              <div class="modalImage">
+                <img src="assets/Images/lh_webzine_new.jpg" alt="" />
+              </div>
+              <div class="About">
+                <p>ABOUT THIS</p>
+                <p>
+                  한국 토지주택공사 사보의 웹진 사이트입니다.<br />
+                  풀스크린 라이브러리를 사용해 메인화면에 사진을 배치하여 시원한
+                  느낌을 주었습니다.<br />
+                  사보의 각 목차들이 슬라이드형태로 나올 수 있게 메인에 배치하여
+                  모든 칼럼이 한눈에 보일 수 있도록 배치하였습니다.
+                </p>
+              </div>
+              <!-- <div class="Period">
+                <p>PERIOD</p>
+                <p>2021.01 ~ 2022.01</p>
+              </div>
+              <div class="Contribute">
+                <p>CONTRIBUTE</p>
+                <p>
+                  퍼블리싱, 사이트 구축 100%<br />
+                  유지보수 100%
+                </p>
+              </div> -->
+              <div class="Tech">
+                <div><img src="./assets/Images/lh_webzine.jpg" alt="" /></div>
+                <div>
+                  <p>WORKS</p>
+
+                  <ul>
+                    <li>Google Analytics Report</li>
+                    <li>File Server 관리</li>
+                    <li>콘텐츠, css 유지보수</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="Close">
+                <p></p>
+                <p>
+                  <button class="closeBtn">CLOSE</button>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

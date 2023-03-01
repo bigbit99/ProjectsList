@@ -19,7 +19,7 @@ for (let i = 0; i < tabList.length; i++) {
 }
 
 //section6 - 모달
-let body = document.querySelector('body');
+let body = document.getElementById('Body');
 let modals = document.getElementsByClassName('modal');
 let openBtns = document.getElementsByClassName('openBtn');
 let closeBtns = document.getElementsByClassName('closeBtn');
@@ -28,19 +28,22 @@ let index = 1;
 function Modal(num) {
   return function () {
     // modals[num].style.display = 'block';
-    // body.classList.add('not_scroll');
+    // modals[num].style.zIndex = '100';
+    // body.style.overflow = 'hidden';
     openBtns[num].onclick = function (e) {
-      e.preventDefault();
-      modals[num].style.display = 'block';
+      // e.preventDefault();
+      modals[num].style.visibility = 'visible';
+      modals[num].style.top = '0';
       modals[num].style.zIndex = '50';
-      body.classList.add('not_scroll');
+      body.style.overflow = 'hidden';
       console.log('오픈!');
       index++;
     };
     closeBtns[num].onclick = function (e) {
       e.preventDefault();
-      modals[num].style.display = 'none';
-      body.classList.remove('not_scroll');
+      modals[num].style.visibility = 'hidden';
+      modals[num].style.top = 'calc(100vh - 64px)';
+      body.style.overflow = 'unset';
       console.log('클로즈!');
     };
   };

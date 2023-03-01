@@ -69,7 +69,7 @@ body #Wrap {
   transition: all 0.5s;
 }
 .nav .navBox .navRight > div:nth-child(1) a:hover {
-  background-color: #e5855e;
+  background-color: #333;
 }
 .nav .navBox .navRight > div:nth-child(2) {
   background-color: #000;
@@ -470,56 +470,11 @@ body #Wrap {
   transition: all 0.8s;
   overflow: hidden;
 }
-.content .sectionSix > .works_img .tabCont > h4 div:nth-child(3) {
-  overflow: hidden;
-  visibility: hidden;
-}
-.content .sectionSix > .works_img .tabCont > h4 div:nth-child(3) > span {
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: #000;
-  margin-bottom: 20px;
-}
 .content .sectionSix > .works_img .tabCont .tabImgBox {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
-}
-.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  padding: 30px 20px;
-  box-sizing: border-box;
-  transition: ease-in-out 0.3s;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  z-index: 5;
-}
-.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe > a {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #000;
-}
-.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe > a p {
-  color: #000;
-}
-.content .sectionSix > .works_img .tabCont .tabImgBox .works_subscribe dl:nth-child(1) {
-  margin-bottom: 15px;
-}
-.content .sectionSix > .works_img .tabCont .tabImgBox:hover .works_subscribe {
-  visibility: visible;
-  opacity: 1;
 }
 .content .sectionSix > .works_img .tabCont .tabImgBox > a {
   display: block;
@@ -1230,11 +1185,12 @@ body #Wrap {
   width: 100%;
   height: calc(100vh - 64px);
   margin-top: 65px;
-  display: none;
+  visibility: hidden;
   position: fixed;
+  top: calc(100vh - 64px);
   left: 0;
-  top: 0;
   background-color: #fef9f3;
+  transition: all 0.3s;
   overflow: scroll;
 }
 .content .modalWrap .modal::-webkit-scrollbar {
@@ -1243,25 +1199,142 @@ body #Wrap {
 .content .modalWrap .modal .modalBoxOne {
   width: 100%;
 }
-.content .modalWrap .modal .modalBoxOne .modalTitle {
+.content .modalWrap .modal .modalBoxOne .topTitle {
   text-align: center;
-  border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding-bottom: 15px;
 }
-.content .modalWrap .modal .modalBoxOne .modalTitle h4 {
+.content .modalWrap .modal .modalBoxOne .topTitle h4 {
   font-size: 4rem;
+  font-family: "Tilt Warp", cursive;
 }
-.content .modalWrap .modal .modalBoxOne .modalTitle p {
-  font-size: 0.9rem;
+.content .modalWrap .modal .modalBoxOne .topTitle p {
+  font-size: 0.9em;
 }
 .content .modalWrap .modal .modalBoxOne .modalImage {
   padding: 30px;
   border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content .modalWrap .modal .modalBoxOne .modalImage img {
   width: 100%;
   max-width: 50%;
+  border: 1px solid #000;
+}
+.content .modalWrap .modal .modalBoxOne .About {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .About > p {
+  width: 50%;
+  padding: 25px 15px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+.content .modalWrap .modal .modalBoxOne .About > p:nth-child(1) {
+  border-right: 1px solid #000;
+  font-size: 3rem;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content .modalWrap .modal .modalBoxOne .Period,
+.content .modalWrap .modal .modalBoxOne .Contribute {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Period > p,
+.content .modalWrap .modal .modalBoxOne .Contribute > p {
+  width: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+.content .modalWrap .modal .modalBoxOne .Period > p:nth-child(1),
+.content .modalWrap .modal .modalBoxOne .Contribute > p:nth-child(1) {
+  border-right: 1px solid #000;
+  font-size: 1rem;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content .modalWrap .modal .modalBoxOne .Tech {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Tech > div {
+  width: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(1) {
+  border-right: 1px solid #000;
+  display: flex;
+  justify-content: center;
+}
+.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(1) img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #000;
+}
+.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(2) > p {
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  font-family: "Tilt Warp", cursive;
+}
+.content .modalWrap .modal .modalBoxOne .Close {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p {
+  width: 50%;
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p:nth-child(1) {
+  border-right: 1px solid #000;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p:nth-child(2) {
+  box-sizing: border-box;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p:nth-child(2) > button {
+  display: block;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: "Tilt Warp", cursive;
+  width: 100%;
+  text-align: right;
+  padding: 15px;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p:nth-child(2):hover {
+  background-color: #000;
+}
+.content .modalWrap .modal .modalBoxOne .Close > p:nth-child(2):hover button {
+  color: #fff;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
