@@ -67,7 +67,7 @@
         </section>
         <!-- section 3 -->
         <section class="sectionThree">
-          <div class="swiper swiper-container">
+          <div id="secondSwiper" class="swiper swiper-container">
             <div class="swiper-wrapper">
               <div class="swiperWrap swiper-slide">
                 <a class="pod">
@@ -275,7 +275,7 @@
           </p>
         </section>
 
-        <!-- 😺section8 -->
+        <!-- section8 -->
         <section class="sectionEight">
           <ul>
             <li class="weather">
@@ -635,7 +635,7 @@
 
     <!-- scripts -->
     <script>
-      let firstSwiper = new Swiper('.swiper-container', {
+      let secondSwiper = new Swiper('#secondSwiper', {
         slidesPerView: 'auto',
         grabCursor: true,
         allowTouchMove: true,

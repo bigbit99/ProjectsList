@@ -20,13 +20,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
   }
 }
-// 모달 오픈 시 바디 스크롤 방지
-.not_scroll {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
+
 //상단 네비게이션
 .nav {
   width: 100%;
@@ -71,7 +65,8 @@ body {
           box-sizing: border-box;
           transition: all 0.5s;
           &:hover {
-            background-color: #333;
+            background-color: #e5855e;
+            // cursor: url(./Images/cursor_watch.png) 50 50, auto;
           }
         }
       }
@@ -474,6 +469,7 @@ body {
           width: 100%;
           height: 100%;
         }
+
         > h4 {
           position: absolute;
           left: 20px;
@@ -506,75 +502,12 @@ body {
               overflow: hidden;
             }
           }
-          // div:nth-child(3) {
-          //   overflow: hidden;
-          //   visibility: hidden;
-          //   > span {
-          //     display: block;
-          //     width: 60px;
-          //     height: 1px;
-          //     background-color: #000;
-          //     margin-bottom: 20px;
-          //   }
-          // }
         }
         .tabImgBox {
           width: 100%;
           height: 100%;
           position: relative;
           overflow: hidden;
-          // .works_subscribe {
-          //   visibility: hidden;
-          //   opacity: 0;
-          //   position: absolute;
-          //   // top: 50%;
-          //   // left: 50%;
-          //   // transform: translate(-50%, -50%);
-          //   padding: 30px 20px;
-          //   box-sizing: border-box;
-          //   transition: ease-in-out 0.3s;
-          //   width: 100%;
-          //   height: 100%;
-          //   background-color: rgba(0, 0, 0, 0.5);
-          //   color: #fff;
-          //   z-index: 5;
-          //   > a {
-          //     display: block;
-          //     position: absolute;
-          //     top: 50%;
-          //     left: 50%;
-          //     transform: translate(-50%, -50%);
-          //     padding: 10px 20px;
-          //     background-color: #fff;
-          //     border-radius: 10px;
-          //     border: 1px solid #000;
-          //     p {
-          //       color: #000;
-          //     }
-          //   }
-          //   dl:nth-child(1) {
-          //     margin-bottom: 15px;
-          //   }
-          // }
-          // &:hover .works_subscribe {
-          //   visibility: visible;
-          //   opacity: 1;
-          // }
-          // > #cursorPoint {
-          //   visibility: hidden;
-          //   overflow: hidden;
-          //   position: absolute;
-          //   left: 0;
-          //   top: 0;
-          //   width: 100px;
-          //   height: 100px;
-          //   border: 1px solid #000;
-          //   background-color: #fff;
-          //   pointer-events: none;
-          //   border-radius: 100%;
-          //   box-sizing: border-box;
-          //   z-index: 8;
-          // }
           > a {
             display: block;
             position: absolute;
