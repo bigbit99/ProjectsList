@@ -53,9 +53,15 @@
             </div>
           </div>
           <div>
-            <div>
-              <img src="./assets/Images/hanbit.png" alt="" />
+            <div class="imgHanbitBox">
+              <!-- <img id="hanbitintro" src=""></img> -->
+              <img class="imgHanbit" src="./assets/Images/hanbit.png" alt="" />
+              <!-- <img class="imgHanbit" src="./assets/Images/hanbit2.png" alt="" />
+              <img class="imgHanbit" src="./assets/Images/hanbit3.png" alt="" /> -->
             </div>
+            <!-- <div class="progressBar">
+              <div class="barInner">돼지</div>
+            </div> -->
           </div>
         </section>
         <section class="sectionTwo">
@@ -67,7 +73,13 @@
         </section>
         <!-- section 3 -->
         <section class="sectionThree">
-          <div id="secondSwiper" class="swiper swiper-container">
+          <div
+            id="secondSwiper"
+            class="swiper swiper-container"
+            style="
+              margin-left: inherit !important;
+              margin-right: inherit !important;
+            ">
             <div class="swiper-wrapper">
               <div class="swiperWrap swiper-slide">
                 <a class="pod">
@@ -635,6 +647,8 @@
 
     <!-- scripts -->
     <script>
+      let fistSwiper = new Swiper('#firstSwiper');
+
       let secondSwiper = new Swiper('#secondSwiper', {
         slidesPerView: 'auto',
         grabCursor: true,

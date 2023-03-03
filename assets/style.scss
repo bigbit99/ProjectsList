@@ -123,17 +123,64 @@ body {
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      > div {
+      flex-direction: column;
+      > div.imgHanbitBox {
         width: 100%;
-        max-width: 500px;
-        height: 500px;
+        max-width: 60%;
+        height: 60%;
         border: 1px solid #000;
         box-sizing: border-box;
-
         overflow: hidden;
+        position: relative;
         > img {
           display: block;
           width: 100%;
+          height: auto;
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // transition: ease-in-out 0.4s;
+        }
+      }
+      > div.progressBar {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 60%;
+        height: 10px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        overflow: hidden;
+        position: relative;
+        transform: translatez(0);
+        > div.barInner {
+          width: 0%;
+          // transform: translateX(0%);
+          transition: all 4000ms ease-out;
+          // bottom: 0;
+          // left: 0;
+          // position: absolute;
+          // top: 0;
+          // right: 0;
+
+          &.activeBar {
+            width: 100%;
+            transition: all 3000ms ease-out;
+            // transform: translateX(100%);
+            // -webkit-transform: translateX(100%);
+          }
+        }
+        > div.barInner:nth-child(1) {
+          background-color: #e5855e;
+        }
+        > div.barInner:nth-child(2) {
+          background-color: #009dd2;
+          margin-top: 10px;
+        }
+        > div.barInner:nth-child(3) {
+          background-color: #8aa7ec;
+          margin-top: 10px;
         }
       }
     }

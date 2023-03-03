@@ -110,18 +110,53 @@ body #Wrap {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
 }
-.content .sectionOne > div:nth-child(2) > div {
+.content .sectionOne > div:nth-child(2) > div.imgHanbitBox {
   width: 100%;
-  max-width: 500px;
-  height: 500px;
+  max-width: 60%;
+  height: 60%;
   border: 1px solid #000;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
-.content .sectionOne > div:nth-child(2) > div > img {
+.content .sectionOne > div:nth-child(2) > div.imgHanbitBox > img {
   display: block;
   width: 100%;
+  height: auto;
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 60%;
+  height: 10px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar > div.barInner {
+  width: 0%;
+  transition: all 4000ms ease-out;
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar > div.barInner.activeBar {
+  width: 100%;
+  transition: all 3000ms ease-out;
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar > div.barInner:nth-child(1) {
+  background-color: #e5855e;
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar > div.barInner:nth-child(2) {
+  background-color: #009dd2;
+  margin-top: 10px;
+}
+.content .sectionOne > div:nth-child(2) > div.progressBar > div.barInner:nth-child(3) {
+  background-color: #8aa7ec;
+  margin-top: 10px;
 }
 .content .sectionTwo {
   border-bottom: 1px solid #000;

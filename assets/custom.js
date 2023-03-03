@@ -1,3 +1,71 @@
+//section2 - 이미지 모션
+// let imgArray = new Array();
+// imgArray[0] = './assets/Images/hanbit.png';
+// imgArray[1] = './assets/Images/hanbit2.png';
+// imgArray[2] = './assets/Images/hanbit3.png';
+
+// imgIndex = 0;
+
+// window.onload = function showImage() {
+//   let objImg = document.getElementById('hanbitintro');
+//   for (i = 0; i < imgArray.length; i++) {
+//     objImg.src = imgArray[imgIndex];
+//   }
+
+//   imgIndex++;
+//   if (imgIndex >= imgArray.length) {
+//     imgIndex = 0;
+//   }
+//   setTimeout(showImage, 5000);
+// };
+
+// window.onload = function () {
+//   motionShow();
+// };
+
+// let i;
+// let j;
+// let x = document.querySelectorAll('.imgHanbit');
+// let bar = document.querySelector('.barInner');
+// let imgArray = new Array();
+// imgArray[0] = x[0];
+// imgArray[1] = x[1];
+// imgArray[2] = x[2];
+// let imgIndex = 0;
+
+// function motionShow() {
+//   for (i = 0; i < x.length; i++) {
+//     // x[i].style.visibility = 'hidden';
+//     // x[i].style.opacity = 0;
+//   }
+//   imgIndex++;
+//   if (imgIndex >= x.length) {
+//     imgIndex = 0;
+//     // imgIndex = 1;
+//   }
+//   // x[imgIndex - 1].style.visibility = 'visible';
+//   // x[imgIndex - 1].style.opacity = 1;
+
+//   setTimeout(motionShow, 3000);
+// }
+
+// // progressBar
+// function progressBar() {
+//   for (i = 0; i < x.length; i++) {
+//     bar.style.width = '100%';
+//   }
+//   // for (let i = 0; i < loadBar.length; i++) {
+//   //   setTimeout(function () {
+//   //     loadBar[i].style.display = 'block';
+//   //   }, (i + 1) * 500);
+//   // }
+//   // for (let j = 0; j < loadBar.length; j++) {
+//   //   loadBar[j].style.display = 'none';
+//   // }
+// }
+// progressBar();
+// setInterval(progressBar, 3000);
+
 //section6 - 탭 컨트롤
 const tabList = document.querySelectorAll('.tabWrap .list li');
 const contents = document.querySelectorAll('.works_img .tabCont');
@@ -36,7 +104,6 @@ function Modal(num) {
       modals[num].style.top = '0';
       modals[num].style.zIndex = '50';
       body.style.overflow = 'hidden';
-      console.log('오픈!');
       index++;
     };
     closeBtns[num].onclick = function (e) {
@@ -44,7 +111,6 @@ function Modal(num) {
       modals[num].style.visibility = 'hidden';
       modals[num].style.top = 'calc(100vh - 64px)';
       body.style.overflow = 'unset';
-      console.log('클로즈!');
     };
   };
 }
@@ -56,21 +122,6 @@ for (let j = 0; j < openBtns.length; j++) {
   funcs[j]();
 }
 
-//section6 - 마우스오버 이벤트
-// const worksImgArea = document.querySelector(
-//   '.sectionSix .works_img .tabCont .tabImgBox'
-// );
-// const cursorPoint = document.getElementById('cursorPoint');
-
-// worksImgArea.addEventListener('mousemove', function (e) {
-//   let x = e.offsetX;
-//   let y = e.offsetY;
-//   cursorPoint.style.left = x + 'px';
-//   cursorPoint.style.top = y + 'px';
-//   cursorPoint.style.visibility = 'visible';
-// });
-
-//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 //section8 - 마우스 무브 이벤트
 const weather = document.querySelector('.sectionEight ul li.weather');
 const cursorOne = document.getElementById('circleOne');
