@@ -229,3 +229,10 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
+
+//section9 - 년도
+const thisYear = document.querySelector('.thisYear');
+const getYear = () => {
+  thisYear.innerText = `${new Date().getFullYear()}`;
+};
+getYear();

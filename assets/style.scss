@@ -1606,13 +1606,25 @@ body {
   //section9
   .sectionNine {
     width: 100%;
-    min-height: calc(100vh - 64px);
+    min-height: calc(100vh - 300px);
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     background-color: #000;
+    position: relative;
+    footer {
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      padding-left: 20px;
+      p {
+        color: #fff;
+        font-family: 'Tilt Warp', cursive;
+        font-size: 1.2em;
+      }
+    }
   }
 
   // modlaWrap
