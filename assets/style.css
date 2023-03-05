@@ -115,7 +115,7 @@ body #Wrap {
 .content .sectionOne > div:nth-child(2) > div.imgHanbitBox {
   width: 100%;
   max-width: 60%;
-  height: 60%;
+  height: auto;
   border: 1px solid #000;
   box-sizing: border-box;
   overflow: hidden;
@@ -184,10 +184,7 @@ body #Wrap {
 }
 .content .sectionThree div.swiperWrap {
   overflow: hidden;
-  display: flex;
-  align-items: stretch;
   height: auto;
-  justify-content: flex-start;
   width: 40rem;
   border-right: 1px solid #000;
 }
@@ -247,7 +244,6 @@ body #Wrap {
 .content .sectionThree div.swiperWrap > a.pod .pod_image .pod_image_hold > .div_img > img {
   display: block;
   width: 100%;
-  max-width: 600px;
   height: auto;
 }
 .content .sectionThree div.swiperWrap > a.pod .pod_image .pod_image_hold > img {
@@ -266,13 +262,30 @@ body #Wrap {
   padding-bottom: 100%;
   width: 100%;
 }
-.content .sectionThree div.swiperWrap > a.pod .pod_info {
+.content .sectionThree div.swiperWrap .pod_info {
   width: 100%;
   border-top: 1px solid #000;
-  padding: 10px 0 10px 20px;
+  padding: 10px 20px 10px 20px;
   box-sizing: border-box;
   font-family: "Tilt Warp", cursive;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .sectionThree div.swiperWrap .pod_info ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.content .sectionThree div.swiperWrap .pod_info ul a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.content .sectionThree div.swiperWrap .pod_info ul a > img {
+  width: 100%;
+  display: block;
 }
 .content .sectionFour {
   width: 100%;
