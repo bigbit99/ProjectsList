@@ -66,7 +66,7 @@ body {
           transition: all 0.5s;
           &:hover {
             background-color: #e5855e;
-            // cursor: url(./Images/cursor_watch.png) 50 50, auto;
+            cursor: url(./Images/mouse_obj.svg) 50 50, auto;
           }
         }
       }
@@ -1625,12 +1625,16 @@ body {
     width: 100%;
     min-height: calc(100vh - 300px);
     border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
     box-sizing: border-box;
     background-color: #000;
     position: relative;
+    > p {
+      padding: 20px 0 0 20px;
+      color: #fff;
+    }
     footer {
       position: absolute;
       bottom: 2%;

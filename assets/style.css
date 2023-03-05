@@ -63,6 +63,7 @@ body #Wrap {
 }
 .nav .navBox .navRight > div:nth-child(1) a:hover {
   background-color: #e5855e;
+  cursor: url(./Images/mouse_obj.svg) 50 50, auto;
 }
 .nav .navBox .navRight > div:nth-child(2) {
   background-color: #000;
@@ -1479,12 +1480,13 @@ body #Wrap {
   width: 100%;
   min-height: calc(100vh - 300px);
   border-bottom: 1px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
   background-color: #000;
   position: relative;
+}
+.content .sectionNine > p {
+  padding: 20px 0 0 20px;
+  color: #fff;
 }
 .content .sectionNine footer {
   position: absolute;
