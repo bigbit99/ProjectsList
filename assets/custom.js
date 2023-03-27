@@ -9,51 +9,35 @@ function slideShow() {
   let i;
   let x = document.getElementsByClassName('imgHanbitBox');
   for (i = 0; i < x.length; i++) {
-    x[i].classList.add('active');
+    x[i].classList.remove('active');
   }
   imgIndex++;
   if (imgIndex > x.length) {
     imgIndex = 1;
   }
-  x[imgIndex - 1].classList.remove('active');
+  x[imgIndex - 1].classList.add('active');
   setTimeout(slideShow, 4000);
 }
 
 // // progressBar
-// let i = 0;
-// function move() {
-//   console.log(i);
-//   if (i === 0) {
-//     i = 1;
-//     console.log(i);
-//     let elem = document.getElementById('barInner');
-//     let width = 0;
-//     let id = setInterval(frame, 4);
-//     function frame() {
-//       if (width >= 100) {
-//         clearInterval(id);
-//         i = 0;
-//       } else {
-//         width++;
-//         elem.style.width = width + '%';
-//       }
-//     }
-//   }
-// }
 function progressBar() {
   let i;
   let x = document.getElementsByClassName('barInner');
+  let j = document.querySelectorAll('.leftSpan span');
   for (i = 0; i < x.length; i++) {
-    x[i].classList.add('activeBar');
+    x[i].classList.remove('activeBar');
+    j[i].classList.add('out');
+    j[i].classList.remove('activeSpan');
   }
   barIndex++;
   if (barIndex > x.length) {
     barIndex = 1;
   }
-  x[barIndex - 1].classList.remove('activeBar');
+  x[barIndex - 1].classList.add('activeBar');
+  j[barIndex - 1].classList.add('remove');
+  j[barIndex - 1].classList.remove('out');
   setTimeout(progressBar, 4000);
 }
-clearInterval(progressBar);
 
 //section6 - 탭 컨트롤
 const tabList = document.querySelectorAll('.tabWrap .list li');

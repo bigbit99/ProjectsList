@@ -125,6 +125,7 @@ body {
       overflow: hidden;
       flex-direction: column;
       position: relative;
+
       > div.imgHanbitBox {
         width: 100%;
         max-width: 0%;
@@ -148,32 +149,66 @@ body {
         height: 70%;
         z-index: 40;
       }
-      > div.progressBar {
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 70%;
-        height: 10px;
-        border-radius: 15px;
-        border: 1px solid #000;
-        overflow: hidden;
+      > div.bottomBox {
         position: absolute;
         left: 50%;
         bottom: 10%;
         transform: translateX(-50%);
-        > div.barInner {
-          width: 0%;
-          height: 100%;
-          background-color: #e5855e;
-          position: absolute;
-          top: 0;
-          left: 0;
+        width: 70%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        > span {
+          display: block;
         }
-        > div.barInner.activeBar {
+        > span.leftSpan {
+          color: #000;
+          opacity: 1;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          & > span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(35%);
+          }
+          & > span.activeSpan {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          & > span.out {
+            opacity: 0;
+            transform: translateX(-35%);
+            transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+          }
+        }
+
+        > div.progressBar {
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
           width: 100%;
-          z-index: 60;
-          transition: all 4000ms ease-out;
+          max-width: 70%;
+          height: 10px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: relative;
+
+          > div.barInner {
+            width: 0%;
+            height: 100%;
+            background-color: #e5855e;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          > div.barInner.activeBar {
+            width: 100%;
+            z-index: 60;
+            transition: all 4000ms ease-out;
+          }
         }
       }
     }
