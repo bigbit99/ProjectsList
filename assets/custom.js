@@ -1,70 +1,59 @@
-//section2 - 이미지 모션
-// let imgArray = new Array();
-// imgArray[0] = './assets/Images/hanbit.png';
-// imgArray[1] = './assets/Images/hanbit2.png';
-// imgArray[2] = './assets/Images/hanbit3.png';
+let imgIndex = 0;
+let barIndex = 0;
+window.onload = function () {
+  slideShow();
+  progressBar();
+};
 
-// imgIndex = 0;
-
-// window.onload = function showImage() {
-//   let objImg = document.getElementById('hanbitintro');
-//   for (i = 0; i < imgArray.length; i++) {
-//     objImg.src = imgArray[imgIndex];
-//   }
-
-//   imgIndex++;
-//   if (imgIndex >= imgArray.length) {
-//     imgIndex = 0;
-//   }
-//   setTimeout(showImage, 5000);
-// };
-
-// window.onload = function () {
-//   motionShow();
-// };
-
-// let i;
-// let j;
-// let x = document.querySelectorAll('.imgHanbit');
-// let bar = document.querySelector('.barInner');
-// let imgArray = new Array();
-// imgArray[0] = x[0];
-// imgArray[1] = x[1];
-// imgArray[2] = x[2];
-// let imgIndex = 0;
-
-// function motionShow() {
-//   for (i = 0; i < x.length; i++) {
-//     // x[i].style.visibility = 'hidden';
-//     // x[i].style.opacity = 0;
-//   }
-//   imgIndex++;
-//   if (imgIndex >= x.length) {
-//     imgIndex = 0;
-//     // imgIndex = 1;
-//   }
-//   // x[imgIndex - 1].style.visibility = 'visible';
-//   // x[imgIndex - 1].style.opacity = 1;
-
-//   setTimeout(motionShow, 3000);
-// }
+function slideShow() {
+  let i;
+  let x = document.getElementsByClassName('imgHanbitBox');
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.add('active');
+  }
+  imgIndex++;
+  if (imgIndex > x.length) {
+    imgIndex = 1;
+  }
+  x[imgIndex - 1].classList.remove('active');
+  setTimeout(slideShow, 4000);
+}
 
 // // progressBar
-// function progressBar() {
-//   for (i = 0; i < x.length; i++) {
-//     bar.style.width = '100%';
+// let i = 0;
+// function move() {
+//   console.log(i);
+//   if (i === 0) {
+//     i = 1;
+//     console.log(i);
+//     let elem = document.getElementById('barInner');
+//     let width = 0;
+//     let id = setInterval(frame, 4);
+//     function frame() {
+//       if (width >= 100) {
+//         clearInterval(id);
+//         i = 0;
+//       } else {
+//         width++;
+//         elem.style.width = width + '%';
+//       }
+//     }
 //   }
-//   // for (let i = 0; i < loadBar.length; i++) {
-//   //   setTimeout(function () {
-//   //     loadBar[i].style.display = 'block';
-//   //   }, (i + 1) * 500);
-//   // }
-//   // for (let j = 0; j < loadBar.length; j++) {
-//   //   loadBar[j].style.display = 'none';
-//   // }
 // }
-// progressBar();
-// setInterval(progressBar, 3000);
+function progressBar() {
+  let i;
+  let x = document.getElementsByClassName('barInner');
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.add('activeBar');
+  }
+  barIndex++;
+  if (barIndex > x.length) {
+    barIndex = 1;
+  }
+  x[barIndex - 1].classList.remove('activeBar');
+  setTimeout(progressBar, 4000);
+}
+clearInterval(progressBar);
 
 //section6 - 탭 컨트롤
 const tabList = document.querySelectorAll('.tabWrap .list li');
