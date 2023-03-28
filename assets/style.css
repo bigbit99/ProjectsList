@@ -140,7 +140,7 @@ body #Wrap {
 .content .sectionOne > div:nth-child(2) > div.bottomBox {
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 7%;
   transform: translateX(-50%);
   width: 70%;
   height: 40px;
@@ -149,12 +149,13 @@ body #Wrap {
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > span {
   display: block;
+  font-family: "Tilt Warp", cursive;
+  width: 30px;
+  height: 26px;
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > span.leftSpan {
   color: #000;
   opacity: 1;
-  width: 30px;
-  height: 30px;
   position: relative;
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > span.leftSpan > span {
@@ -173,7 +174,6 @@ body #Wrap {
   transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > div.progressBar {
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
