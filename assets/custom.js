@@ -1,3 +1,4 @@
+//main photo slider
 let imgIndex = 0;
 let barIndex = 0;
 window.onload = function () {
@@ -19,7 +20,7 @@ function slideShow() {
   setTimeout(slideShow, 4000);
 }
 
-// // progressBar
+//progressBar
 function progressBar() {
   let i;
   let x = document.getElementsByClassName('barInner');
@@ -39,7 +40,7 @@ function progressBar() {
   setTimeout(progressBar, 4000);
 }
 
-//section6 - 탭 컨트롤
+//section6 - tab control
 const tabList = document.querySelectorAll('.tabWrap .list li');
 const contents = document.querySelectorAll('.works_img .tabCont');
 let activeCont = '';
@@ -59,7 +60,7 @@ for (let i = 0; i < tabList.length; i++) {
   });
 }
 
-//section6 - 모달
+//section6 - modal
 let body = document.getElementById('Body');
 let modals = document.getElementsByClassName('modal');
 let openBtns = document.getElementsByClassName('openBtn');
@@ -95,7 +96,7 @@ for (let j = 0; j < openBtns.length; j++) {
   funcs[j]();
 }
 
-//section8 - 마우스 무브 이벤트
+//section8 - mouse move event
 const weather = document.querySelector('.sectionEight ul li.weather');
 const cursorOne = document.getElementById('circleOne');
 weather.addEventListener('mousemove', function (e) {
@@ -150,7 +151,7 @@ cube.addEventListener('mousemove', function (e) {
   circleSix.style.top = y + 'px';
 });
 
-//section8 - 날씨
+//section8 - weather
 const API_KEY = '09f52fdbc4d95c862e79b3691e828f6b';
 
 function onGeoOk(position) {
@@ -173,7 +174,7 @@ function onGeoError() {
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
-// section8 - 로딩바 애니메이션
+// section8 - loading bar animation
 function chargeLoading() {
   let loadBar = document.querySelectorAll('.loadBar');
 
@@ -189,7 +190,7 @@ function chargeLoading() {
 chargeLoading();
 setInterval(chargeLoading, 5000);
 
-//section8 - 시계
+//section8 - clock
 const pointClock = document.querySelector('h2#clock');
 
 function getClock() {
@@ -203,7 +204,7 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 
-//section9 - 년도
+//section9 - year
 const thisYear = document.querySelector('.thisYear');
 const getYear = () => {
   thisYear.innerText = `${new Date().getFullYear()}`;

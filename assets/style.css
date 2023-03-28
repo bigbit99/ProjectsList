@@ -63,12 +63,13 @@ body #Wrap {
 }
 .nav .navBox .navRight > div:nth-child(1) a:hover {
   background-color: #e5855e;
-  cursor: url(./Images/mouse_obj.svg) 50 50, auto;
 }
 .nav .navBox .navRight > div:nth-child(2) {
   background-color: #000;
-  color: #fff;
   padding: 20px 30px;
+}
+.nav .navBox .navRight > div:nth-child(2) a {
+  color: #fff;
 }
 
 .content {
@@ -152,6 +153,7 @@ body #Wrap {
   font-family: "Tilt Warp", cursive;
   width: 30px;
   height: 26px;
+  font-size: 1.3em;
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > span.leftSpan {
   color: #000;
@@ -183,6 +185,7 @@ body #Wrap {
   border: 1px solid #000;
   overflow: hidden;
   position: relative;
+  box-shadow: 2px 3px #000;
 }
 .content .sectionOne > div:nth-child(2) > div.bottomBox > div.progressBar > div.barInner {
   width: 0%;
@@ -357,6 +360,7 @@ body #Wrap {
   align-items: center;
   justify-content: center;
   margin-top: 3.2rem;
+  cursor: pointer;
 }
 .content .sectionFour div a.tabIn::before {
   content: "";
@@ -555,6 +559,8 @@ body #Wrap {
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s;
+  cursor: url(./Images/view.svg) 50 50, auto;
 }
 .content .sectionSix > .works_img .tabCont .tabImgBox > a {
   display: block;
