@@ -3,13 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-@font-face {
-  font-family: 'LINESeedKR-Bd';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2')
-    format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
 // 레이아웃
 body {
@@ -21,17 +14,33 @@ body {
   }
 }
 
+/* 로딩 */
+.loaderWrap {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fef9f3;
+  z-index: 9999;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
 //상단 네비게이션
 .nav {
   width: 100%;
+  height: 64px;
   border-bottom: 1px solid #000;
   background-color: #fef9f3;
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: -64px;
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: 50;
   .navBox {
+    height: 100%;
     display: flex;
     justify-content: space-between;
 
@@ -44,6 +53,9 @@ body {
       font-weight: bold;
       font-family: 'Tilt Warp', cursive;
       margin-left: 20px;
+      @media screen and (max-width: 640px) {
+        font-size: 1rem;
+      }
     }
     .navRight {
       display: flex;
@@ -54,6 +66,9 @@ body {
         font-weight: bold;
         font-family: 'Tilt Warp', cursive;
         cursor: pointer;
+        @media screen and (max-width: 640px) {
+          font-size: 0.8rem;
+        }
       }
       > div:nth-child(1) {
         background-color: transparent;
@@ -81,10 +96,12 @@ body {
 }
 
 // 메인
-.content {
+#content {
   width: 100%;
-  margin-top: 64px;
-
+  position: absolute;
+  top: 100vh;
+  // margin-top: calc(100vh - 64px);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   //section1
   .sectionOne {
     width: 100%;
@@ -93,7 +110,10 @@ body {
     justify-content: space-evenly;
     align-items: stretch;
     border-bottom: 1px solid #000;
-
+    @media screen and (max-width: 640px) {
+      display: block;
+      height: auto;
+    }
     > div:nth-child(1) {
       width: 50%;
       border-right: 1px solid #000;
@@ -102,7 +122,12 @@ body {
       align-items: flex-end;
       padding-left: 20px;
       box-sizing: border-box;
-
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 300px;
+        border-right: none;
+        border-bottom: 1px solid #000;
+      }
       > div {
         > span {
           display: block;
@@ -112,9 +137,15 @@ body {
         }
         > p {
           font-size: 4rem;
+          line-height: 3.7rem;
           font-weight: bold;
           font-family: 'Tilt Warp', cursive;
           padding-bottom: 20px;
+          @media screen and (max-width: 640px) {
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -127,11 +158,13 @@ body {
       overflow: hidden;
       flex-direction: column;
       position: relative;
-
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 500px;
+      }
       > div.imgHanbitBox {
         width: 100%;
         max-width: 0%;
-        height: 0%;
         border: 1px solid #000;
         box-sizing: border-box;
         overflow: hidden;
@@ -148,7 +181,7 @@ body {
       }
       > div.imgHanbitBox.active {
         max-width: 70%;
-        height: 70%;
+
         z-index: 40;
       }
       > div.bottomBox {
@@ -235,16 +268,27 @@ body {
     align-items: center;
     padding: 30px 20px;
     box-sizing: border-box;
+    font-family: 'Tilt Warp', cursive;
+    @media screen and (max-width: 640px) {
+      display: block;
+    }
+
     > p:nth-child(1) {
       width: 50%;
       font-size: 2.5rem;
       font-weight: bold;
-      font-family: 'Tilt Warp', cursive;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        font-size: 2rem;
+      }
     }
     > p:nth-child(2) {
       font-weight: 300;
       width: 50%;
       line-height: 1.4em;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
     }
   }
 
@@ -262,7 +306,12 @@ body {
       // justify-content: flex-start;
       width: 40rem;
       border-right: 1px solid #000;
-
+      @media screen and (max-width: 640px) {
+        width: 28rem;
+      }
+      @media screen and (max-width: 390px) {
+        width: 20rem;
+      }
       > a.pod {
         width: 100%;
         display: flex;
@@ -354,6 +403,9 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 390px) {
+          font-size: 1rem;
+        }
         ul {
           display: flex;
           justify-content: space-between;
@@ -363,6 +415,10 @@ body {
             display: block;
             width: 30px;
             height: 30px;
+            @media screen and (max-width: 390px) {
+              width: 25px;
+              height: 25px;
+            }
             > img {
               width: 100%;
               display: block;
@@ -377,7 +433,7 @@ body {
   .sectionFour {
     width: 100%;
     border-bottom: 1px solid #000;
-    background-color: #e5855e;
+    background-color: #000;
     padding: 10rem 0;
     box-sizing: border-box;
     div {
@@ -386,14 +442,24 @@ body {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      color: #fff;
       p {
         font-size: 5.2rem;
         font-family: 'Tilt Warp', cursive;
         text-align: center;
+        @media screen and (max-width: 640px) {
+          font-size: 4.2rem;
+        }
+        @media screen and (max-width: 390px) {
+          font-size: 3.2rem;
+        }
       }
       p:nth-child(2) {
         font-size: 1.2rem;
         line-height: 1.1rem;
+        @media screen and (max-width: 390px) {
+          font-size: 1rem;
+        }
       }
       a.tabIn {
         padding: 1rem 3.8rem;
@@ -413,7 +479,7 @@ body {
           position: absolute;
           transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
           width: 100%;
-          background: #000;
+          background: #414141;
           border-radius: 4.5rem;
           opacity: 0;
         }
@@ -457,16 +523,25 @@ body {
     align-items: center;
     padding: 30px 20px;
     box-sizing: border-box;
+    font-family: 'Tilt Warp', cursive;
+    @media screen and (max-width: 640px) {
+      display: block;
+    }
     > p:nth-child(1) {
       width: 50%;
       font-size: 2.5rem;
-      font-weight: bold;
-      font-family: 'Tilt Warp', cursive;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        font-size: 2rem;
+      }
     }
     > p:nth-child(2) {
       font-weight: 300;
       width: 50%;
       line-height: 1.4em;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
     }
   }
 
@@ -479,14 +554,24 @@ body {
     min-height: calc(100vh - 64px);
     height: 100%;
     position: relative;
+    @media screen and (max-width: 640px) {
+      display: block;
+      min-height: auto;
+    }
     > .works_info {
       width: 50%;
-      background-color: #38598b;
+      background-color: #e5855e;
       border-right: 1px solid #000;
       padding: 20px 0 0 20px;
       box-sizing: border-box;
       display: flex;
       align-items: flex-end;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 300px;
+        border-right: none;
+        border-bottom: 1px solid #000;
+      }
       div.tabWrap {
         > ul {
           display: flex;
@@ -498,10 +583,12 @@ body {
             display: flex;
             justify-content: center;
             position: relative;
-
             align-items: center;
             transition: opacity 0.45 cubic-bezier(0.55, 0, 0.1, 1);
-
+            @media screen and (max-width: 640px) {
+              width: 2.5em;
+              height: 2.5em;
+            }
             &.active {
               background-color: transparent;
             }
@@ -537,7 +624,7 @@ body {
               position: absolute;
               top: 0;
               transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-              background-color: #38598b;
+              background-color: #e5855e;
               border: 1px solid #000;
               border-radius: 100%;
             }
@@ -568,6 +655,10 @@ body {
       width: 50%;
       display: flex;
       align-items: stretch;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 300px;
+      }
       .tabCont {
         width: 0%;
         height: 0;
@@ -606,6 +697,9 @@ body {
               transform: translate(0%, 120%);
               transition: all 0.8s;
               overflow: hidden;
+              @media screen and (max-width: 640px) {
+                font-size: 3em;
+              }
             }
           }
         }
@@ -686,16 +780,26 @@ body {
     align-items: center;
     padding: 30px 20px;
     box-sizing: border-box;
+    font-family: 'Tilt Warp', cursive;
+    @media screen and (max-width: 640px) {
+      display: block;
+    }
     > p:nth-child(1) {
       width: 50%;
       font-size: 2.5rem;
       font-weight: bold;
-      font-family: 'Tilt Warp', cursive;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        font-size: 2rem;
+      }
     }
     > p:nth-child(2) {
       font-weight: 300;
       width: 50%;
       line-height: 1.4em;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
     }
   }
 
@@ -711,6 +815,9 @@ body {
         font-weight: bold;
         font-family: 'Tilt Warp', cursive;
         position: relative;
+        @media screen and (max-width: 640px) {
+          font-size: 2rem;
+        }
         .circle {
           overflow: hidden;
           visibility: hidden;
@@ -796,7 +903,7 @@ body {
         }
         #circleTwo {
           background-color: #529ca0;
-          .loaderWrap {
+          .loaderCircle {
             width: 100%;
             height: 100%;
             background-color: #ebe1d8;
@@ -1667,7 +1774,7 @@ body {
   //section9
   .sectionNine {
     width: 100%;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 500px);
     border-bottom: 1px solid #000;
     // display: flex;
     // justify-content: space-between;
@@ -1676,14 +1783,15 @@ body {
     background-color: #000;
     position: relative;
     > p {
-      padding: 20px 0 0 20px;
+      padding: 20px 20px 0 20px;
       color: #fff;
     }
     footer {
       position: absolute;
       bottom: 2%;
-      left: 0;
+      right: 0;
       padding-left: 20px;
+      padding-right: 20px;
       p {
         color: #fff;
         font-family: 'Tilt Warp', cursive;

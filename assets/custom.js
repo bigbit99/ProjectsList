@@ -1,9 +1,29 @@
 //main photo slider
 let imgIndex = 0;
 let barIndex = 0;
+
+const navBar = document.querySelector('nav');
+const mainCont = document.getElementById('content');
+const loaderWrap = document.querySelector('.loaderWrap');
+const html = document.querySelector('html');
+
+navBar.style.top = '-64px';
+mainCont.style.top = 'calc(100vh)';
 window.onload = function () {
-  slideShow();
-  progressBar();
+  setTimeout(() => {
+    loaderWrap.style.opacity = '0';
+    window.scrollTo(0, 0);
+  }, 500);
+  setTimeout(() => {
+    navBar.style.top = '0px';
+  }, 1000);
+  setTimeout(() => {
+    mainCont.style.top = '64px';
+  }, 2000);
+  setTimeout(() => {
+    slideShow();
+    progressBar();
+  }, 3000);
 };
 
 function slideShow() {

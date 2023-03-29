@@ -29,6 +29,9 @@
   </head>
 
   <body id="Body">
+    <!-- loadWrap -->
+    <div class="loaderWrap"></div>
+
     <div id="Wrap">
       <nav class="nav">
         <div class="navBox">
@@ -45,12 +48,12 @@
           </div>
         </div>
       </nav>
-      <div class="content">
+      <div id="content">
         <section class="sectionOne">
           <div>
             <div>
               <span># part1</span>
-              <p>I'm a show you<br />who i am</p>
+              <p>I'll show you<br />who i am</p>
             </div>
           </div>
           <div>
@@ -82,8 +85,8 @@
         <section class="sectionTwo">
           <p>Side Projects</p>
           <p>
-            Let me Intorduce my projdects made by react.<br />
-            I collaborate with back-end-develper and made alone used to
+            Introducing my projdects made by react.<br />
+            I collaborate with back-end-develper and developed by myself using
             firebase!
           </p>
         </section>
@@ -333,7 +336,7 @@
               If you want to see more projects?<br />
               so, please press the button
             </p>
-            <a class="tabIn">
+            <a href="https://github.com/bigbit99" target="_blank" class="tabIn">
               <p class="tabText">TAP IN</p>
             </a>
           </div>
@@ -341,8 +344,9 @@
         <section class="sectionFive">
           <p>Works</p>
           <p>
-            프론트엔드 개발자가 되기 위해 공부하며 만든 사이드프로젝트입니다.<br />
-            특히, 파이어베이스로 서버까지 혼자서 만든 1인 프로젝트 트위터
+            Introducing the projects worked on for two years as a publisher.<br />
+            Web accessibility certification, cross browsing etc.. I did
+            interactive things.
           </p>
         </section>
 
@@ -489,8 +493,8 @@
         <section class="sectionSeven">
           <p>CSS / JAVASCRIPT</p>
           <p>
-            프론트엔드 개발자가 되기 위해 공부하며 만든 사이드프로젝트입니다.<br />
-            특히, 파이어베이스로 서버까지 혼자서 만든 1인 프로젝트 트위터
+            This is a UI made with css and javascript.<br />Take a look at my
+            creative skills.
           </p>
         </section>
 
@@ -514,7 +518,7 @@
             </li>
             <li class="loading">
               <div id="circleTwo" class="circle">
-                <div class="loaderWrap">
+                <div class="loaderCircle">
                   <div class="loader">
                     <p class="waivy">
                       <span style="--i: 1">L</span>
@@ -674,7 +678,7 @@
                 <p>한국토지주택공사 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/lh_webzine_new.jpg" alt="" />
+                <img src="assets/Images/lh_webzine.jpg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -735,7 +739,7 @@
                 <p>한국문화원연합회 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/wm_webzine_box.jpg" alt="" />
+                <img src="assets/Images/wm_webzine.jpeg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -802,7 +806,7 @@
                 <p>한국 교직원 공제회 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/thek_webzine_box.jpg" alt="" />
+                <img src="assets/Images/thek_webzine.jpeg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -863,7 +867,7 @@
                 <p>웅진씽크빅 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/bookclub_webzine_box.png" alt="" />
+                <img src="assets/Images/bookclub_webzine.jpeg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -924,7 +928,7 @@
                 <p>도로교통공단 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/bookclub_webzine_box.png" alt="" />
+                <img src="assets/Images/sinho_webzine.jpeg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -984,7 +988,7 @@
                 <p>대한주택건설협회 웹진</p>
               </div>
               <div class="modalImage">
-                <img src="assets/Images/bookclub_webzine_box.png" alt="" />
+                <img src="assets/Images/plus_webzine.jpeg" alt="" />
               </div>
               <div class="About">
                 <div>
@@ -1035,14 +1039,18 @@
     <!-- scripts -->
     <script>
       let fistSwiper = new Swiper('#firstSwiper');
-
       let secondSwiper = new Swiper('#secondSwiper', {
         slidesPerView: 'auto',
         grabCursor: true,
         allowTouchMove: true,
-
         observer: true, // 추가
         observeParents: true,
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 1,
+        //     centeredSlides: true,
+        //   },
+        // },
       });
     </script>
     <script type="text/javascript" src="assets/custom.js"></script>
