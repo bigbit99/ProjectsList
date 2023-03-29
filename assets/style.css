@@ -1571,7 +1571,7 @@ body #Wrap {
   padding-bottom: 15px;
 }
 .content .modalWrap .modal .modalBoxOne .topTitle h4 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Tilt Warp", cursive;
 }
 .content .modalWrap .modal .modalBoxOne .topTitle p {
@@ -1589,51 +1589,7 @@ body #Wrap {
   max-width: 50%;
   border: 1px solid #000;
 }
-.content .modalWrap .modal .modalBoxOne .About {
-  border-bottom: 1px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  box-sizing: border-box;
-}
-.content .modalWrap .modal .modalBoxOne .About > p {
-  width: 50%;
-  padding: 25px 15px;
-  box-sizing: border-box;
-  font-size: 0.9em;
-}
-.content .modalWrap .modal .modalBoxOne .About > p:nth-child(1) {
-  border-right: 1px solid #000;
-  font-size: 3rem;
-  font-family: "Tilt Warp", cursive;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.content .modalWrap .modal .modalBoxOne .Period,
-.content .modalWrap .modal .modalBoxOne .Contribute {
-  border-bottom: 1px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  box-sizing: border-box;
-}
-.content .modalWrap .modal .modalBoxOne .Period > p,
-.content .modalWrap .modal .modalBoxOne .Contribute > p {
-  width: 50%;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 0.9em;
-}
-.content .modalWrap .modal .modalBoxOne .Period > p:nth-child(1),
-.content .modalWrap .modal .modalBoxOne .Contribute > p:nth-child(1) {
-  border-right: 1px solid #000;
-  font-size: 1rem;
-  font-family: "Tilt Warp", cursive;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+.content .modalWrap .modal .modalBoxOne .About,
 .content .modalWrap .modal .modalBoxOne .Tech {
   border-bottom: 1px solid #000;
   display: flex;
@@ -1641,32 +1597,36 @@ body #Wrap {
   align-items: stretch;
   box-sizing: border-box;
 }
+.content .modalWrap .modal .modalBoxOne .About .techUl,
+.content .modalWrap .modal .modalBoxOne .Tech .techUl {
+  display: flex;
+  gap: 15px;
+}
+.content .modalWrap .modal .modalBoxOne .About .techUl > li > img,
+.content .modalWrap .modal .modalBoxOne .Tech .techUl > li > img {
+  width: 25px;
+}
+.content .modalWrap .modal .modalBoxOne .About > div,
 .content .modalWrap .modal .modalBoxOne .Tech > div {
   width: 50%;
   padding: 15px;
   box-sizing: border-box;
-}
-.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(1) {
-  border-right: 1px solid #000;
-  display: flex;
-  justify-content: center;
-}
-.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(1) img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border: 1px solid #000;
-}
-.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(2) > p {
+.content .modalWrap .modal .modalBoxOne .About > div > p,
+.content .modalWrap .modal .modalBoxOne .Tech > div > p {
   display: block;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Tilt Warp", cursive;
+}
+.content .modalWrap .modal .modalBoxOne .About > div:nth-child(1),
+.content .modalWrap .modal .modalBoxOne .Tech > div:nth-child(1) {
+  border-right: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
 }
 .content .modalWrap .modal .modalBoxOne .Close {
   display: flex;
