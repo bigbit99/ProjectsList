@@ -49,6 +49,7 @@ body #Wrap {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "Tilt Warp", cursive;
+  cursor: pointer;
 }
 .nav .navBox .navRight > div:nth-child(1) {
   background-color: transparent;
