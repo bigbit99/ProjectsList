@@ -171,7 +171,7 @@ cube.addEventListener('mousemove', function (e) {
   circleSix.style.top = y + 'px';
 });
 
-//section8 - weather
+//section8 - weather(날씨 API)
 const API_KEY = '09f52fdbc4d95c862e79b3691e828f6b';
 
 function onGeoOk(position) {
