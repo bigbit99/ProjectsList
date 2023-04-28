@@ -386,37 +386,44 @@ body #Wrap {
   box-sizing: border-box;
   font-family: "Tilt Warp", cursive;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 @media screen and (max-width: 390px) {
   #content .sectionThree div.swiperWrap .pod_info {
     font-size: 1rem;
   }
 }
-#content .sectionThree div.swiperWrap .pod_info .pod_text p:nth-child(2) {
-  font-size: 15px;
+#content .sectionThree div.swiperWrap .pod_info .pod_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-#content .sectionThree div.swiperWrap .pod_info ul {
+#content .sectionThree div.swiperWrap .pod_info .pod_text p span {
+  color: #666;
+  margin-right: 5px;
+}
+#content .sectionThree div.swiperWrap .pod_info .pod_text ul {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
-#content .sectionThree div.swiperWrap .pod_info ul a {
+#content .sectionThree div.swiperWrap .pod_info .pod_text ul a {
   display: block;
   width: 30px;
   height: 30px;
 }
 @media screen and (max-width: 390px) {
-  #content .sectionThree div.swiperWrap .pod_info ul a {
+  #content .sectionThree div.swiperWrap .pod_info .pod_text ul a {
     width: 25px;
     height: 25px;
   }
 }
-#content .sectionThree div.swiperWrap .pod_info ul a > img {
+#content .sectionThree div.swiperWrap .pod_info .pod_text ul a > img {
   width: 100%;
   display: block;
+}
+#content .sectionThree div.swiperWrap .pod_info p {
+  font-size: 15px;
+  margin-top: 5px;
 }
 #content .sectionFour {
   width: 100%;
