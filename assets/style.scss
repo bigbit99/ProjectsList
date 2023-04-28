@@ -181,7 +181,6 @@ body {
       }
       > div.imgHanbitBox.active {
         max-width: 70%;
-
         z-index: 40;
       }
       > div.bottomBox {
@@ -402,10 +401,16 @@ body {
         font-size: 1.5rem;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         @media screen and (max-width: 390px) {
           font-size: 1rem;
         }
+        .pod_text {
+          p:nth-child(2) {
+            font-size: 15px;
+          }
+        }
+
         ul {
           display: flex;
           justify-content: space-between;
